@@ -1,0 +1,20 @@
+{
+  "name": "kv_api",
+  "version": "0.0.5",
+  "description": "Api created by Kevin Iglesias to Matea Academy",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iglesiiaskeviin/modulo-proyecto3-matea.git"
+  },
+  "author": "Kevin Iglesias <eiikevin01@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iglesiiaskeviin/modulo-proyecto3-matea/issues"
+  },
+  "homepage": "https://github.com/iglesiiaskeviin/modulo-proyecto3-matea#readme"
+}
