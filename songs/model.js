@@ -28,3 +28,11 @@ const Song = moongose.model("songs", songsSchema);
 ///////////////
 /* FUNCTIONS */
 ///////////////
+
+async function getAllSongs(){
+    return await Song.find({});
+}
+
+module.exports = {
+    getAllSongs,
+}
