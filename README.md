@@ -8,7 +8,7 @@ _To begin to understand how this API works, next I will leave a series of steps 
 
 ### Pre-requirements 📋
 
-_Aplicaiones que deberemos de tener para poder usar la API_
+_Applications needed_
 
 ```
 [POSTMAN] - https://www.postman.com/downloads/
@@ -24,8 +24,6 @@ http://localhost:4100/songs
 
 
 ## Development with 🛠️
-
-_Esta api fue creada con : _
 
 * [NODEJS]
 * [MONGOOSE]
