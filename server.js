@@ -15,4 +15,5 @@ console.log(`Server working`);
 
 /* SONGS  */
 
-server.get("/songs", songsParam.getAllSongs)
+server.get("/getSongs", songsParam.getAllSongs)
+server.post("/postSong", songsParam.onPostSong) //bugged

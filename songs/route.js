@@ -11,6 +11,17 @@ async function getAllSongs(req, res){
 }
 
 
+async function onPostSong(req, res){
+    console.log("Entrando en onPostSong")
+    try {
+        await songController.addSong(req.body);
+        res.status(201).send("Se ha posteado con éxito la canción!")
+    } catch (error) {
+        
+    }
+}
+
 module.exports = {
     getAllSongs,
+    onPostSong
 }

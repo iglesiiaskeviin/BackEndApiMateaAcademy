@@ -33,6 +33,14 @@ async function getAllSongs(){
     return await Song.find({});
 }
 
+async function addModelSong(song){
+    console.log("Entrando en addModelSong")
+    var newS = new Song(song);
+    await newS.save();
+    console.log("Termina await")
+}
+
 module.exports = {
     getAllSongs,
+    addModelSong
 }

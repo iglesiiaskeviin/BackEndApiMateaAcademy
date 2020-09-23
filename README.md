@@ -19,7 +19,7 @@ _Applications needed_
 _Obtain an array with all the songs that are in the song scheme in the database_
 
 ```
-http://localhost:4100/songs
+http://localhost:4100/getSongs
 ```
 
 
