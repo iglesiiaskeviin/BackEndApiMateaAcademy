@@ -22,6 +22,11 @@ _Obtain an array with all the songs that are in the song scheme in the database_
 http://localhost:4100/getSongs
 ```
 
+_Obtain an array with all the users that are in the user scheme in the database_
+
+```
+http://localhost:4100/getUsers
+```
 
 ## Development with 🛠️
 
