@@ -1,11 +1,11 @@
-const moongose = require("mongoose");
-
 ////////////////
 /* DB CONNECT */
 ////////////////
 
+const moongose = require("mongoose");
+
 const db = 'mongodb+srv://kevin:123asd@cluster0.vahxu.azure.mongodb.net/proyectoModulo3?retryWrites=true&w=majority'
-mongoose.connect(db,
+moongose.connect(db,
 { 
     useNewUrlParser: true,
     useCreateIndex: true,
