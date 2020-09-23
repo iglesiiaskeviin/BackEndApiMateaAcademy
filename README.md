@@ -24,7 +24,7 @@ _Por hacer aun_
 
 ## Construido con 🛠️
 
-_Menciona las herramientas que utilizaste para crear tu proyecto_
+_Esta api fue creada con : _
 
 * [NODEJS]
 * [MONGOOSE]
