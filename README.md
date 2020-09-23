@@ -1,28 +1,29 @@
-# KV_API
+# About api
 
-_Esta APi va a permitirle al usuario la posibilidad de obtener datos mediante el uso de POSTMAN aplicación la cual nos permite solicitar peticiones y de esta forma en base a la URL que nosotros le indiquemos, podremos obtener diferentes tipos de datos como pueden ser, la obtención de un JSON con datos sobre canciones o sobre usuarios, la posibilidad de agregar, modificar o eliminar una canción la cual nosotros le indiquemos en esta misma URL._
+_This APi will allow the user the possibility of obtaining data through the use of POSTMAN application which allows us to request requests and in this way based on the URL that we indicate, we will be able to obtain different types of data such as obtaining of a JSON with data on songs or on users, the possibility of adding, modifying or deleting a song which we indicate in this same URL._
 
-## Comenzando 🚀
+## Getting Started 🚀
 
-_Para comenzar a entender como funciona esta API, a continuaión dejaré una serie de pasos y acciones las cuales nosotros deberemos de ralizar en la aplicación POSTMAN para obtener aquel o aquellos datos que nosotros necesitemos._
+_To begin to understand how this API works, next I will leave a series of steps and actions which we must carry out in the POSTMAN application to obtain that or those data that we need._
 
----POR HACER---
+### Pre-requirements 📋
 
-
-### Pre-requisitos 📋
-
-_Que cosas necesitas para instalar el software y como instalarlas_
+_Aplicaiones que deberemos de tener para poder usar la API_
 
 ```
 [POSTMAN] - https://www.postman.com/downloads/
 ```
 
-## Ejecutando las pruebas ⚙️
+## Executing commands ⚙️
 
-_Por hacer aun_
+_Obtain an array with all the songs that are in the song scheme in the database_
+
+```
+http://localhost:4100/songs
+```
 
 
-## Construido con 🛠️
+## Development with 🛠️
 
 _Esta api fue creada con : _
 
