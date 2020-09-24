@@ -32,3 +32,7 @@ http://localhost:4100/getUsers
 
 * [NODEJS]
 * [MONGOOSE]
+* [EXPRESS]
+
+## Applications used ⚙️
+* [MongoDB]
