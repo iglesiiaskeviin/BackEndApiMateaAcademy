@@ -14,8 +14,13 @@ async function deleteUser(id){
     return await model.deleteModelUser(id);
 }
 
+async function updateUser(id, bod){
+    return await model.updateModelUser(id, bod);
+}
+
 module.exports = {
     findAllTheUsers,
     addUser,
-    deleteUser
+    deleteUser,
+    updateUser
 }

@@ -13,10 +13,15 @@ async function deleteSong(id){
     return await model.deleteModelSong(id);
 }
 
+async function updateSong(id, bod){
+    return await model.updateModelSong(id, bod);
+}
+
 
 
 module.exports = {
     findAllTheSongs,
     addSong,
-    deleteSong
+    deleteSong,
+    updateSong
 }

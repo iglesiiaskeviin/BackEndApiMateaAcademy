@@ -35,8 +35,43 @@ async function deleteModelSong(id){
     await Song.findByIdAndRemove(id)
 }
 
+async function updateModelSong(id, bod){
+    var myId = id;
+    console.log(myId);
+    return await Song.findOne({_id: myId}, function(error, foundedObj){
+        if (error) {
+            console.log(`Ha ocurrido un error ${error}`);
+        }else{
+            if (!foundedObj) {
+                console.log("Este objeto no existe");
+            } else{
+                if (bod.name) {
+                    foundedObj.name = bod.name;
+                }
+
+                if (bod.album) {
+                    foundedObj.album = bod.album;
+                }
+
+                if (bod.duration) {
+                    foundedObj.duration = bod.duration;
+                }
+
+                if (bod.artist) {
+                    foundedObj.artist = bod.artist;
+                }
+                
+
+                foundedObj.save();
+            }
+        }
+    })
+
+}
+
 module.exports = {
     getAllSongs,
     addModelSong,
-    deleteModelSong
+    deleteModelSong,
+    updateModelSong
 }

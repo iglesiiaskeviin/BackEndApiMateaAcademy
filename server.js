@@ -33,3 +33,8 @@ server.post('/users', usersParam.onPostAddUser)
 
 server.delete('/songs/:songId', songsParam.onDeleteSong)
 server.delete('/users/:userId', usersParam.onDeleteUser)
+
+/* Updating by put method */
+
+server.put('/songs/:id', songsParam.onUpdateSong)
+server.put('/users/:id', usersParam.onUpdateUser)

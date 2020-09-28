@@ -30,9 +30,22 @@ async function onDeleteUser(req, res){
 
 }
 
+async function onUpdateUser(req, res){
+    var id = req.params.id;
+    var bod = req.body;
+    try {
+        await userController.updateUser(id, bod);
+        res.status(201).send("Se ha modificado con éxito este usuario")
+    } catch (error) {
+        res.status(500).send("Un error ha ocurrido");
+    }
+}
+
+
 
 module.exports = {
     getAllUsers,
     onPostAddUser,
-    onDeleteUser
+    onDeleteUser,
+    onUpdateUser
 }

@@ -38,8 +38,42 @@ async function deleteModelUser(id){
     await User.findByIdAndRemove(id)
 }
 
+async function updateModelUser(id, bod){
+    var myId = id;
+    console.log(myId);
+    return await User.findOne({_id: myId}, function(error, foundedObj){
+        if (error) {
+            console.log(`Ha ocurrido un error ${error}`);
+        }else{
+            if (!foundedObj) {
+                console.log("Este objeto no existe");
+            } else{
+                if (bod.name) {
+                    foundedObj.name = bod.name;
+                }
+
+                if (bod.lastname) {
+                    foundedObj.lastname = bod.lastname;
+                }
+
+                if (bod.email) {
+                    foundedObj.email = bod.email;
+                }
+
+                if (bod.artist) {
+                    foundedObj.artist = bod.artist;
+                }
+
+                foundedObj.save();
+            }
+        }
+    })
+
+}
+
 module.exports = {
     getAllUsers,
     addModelUser,
-    deleteModelUser
+    deleteModelUser,
+    updateModelUser
 }
