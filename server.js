@@ -29,6 +29,7 @@ server.post('/songs', songsParam.onPostAddSong)
 server.post('/users', usersParam.onPostAddUser)
 
 
-/* Deleting song */
+/* Deleting by delete method */
 
-server.delete('/:songId', songsParam.onDeleteSong)
+server.delete('/songs/:songId', songsParam.onDeleteSong)
+server.delete('/users/:userId', usersParam.onDeleteUser)

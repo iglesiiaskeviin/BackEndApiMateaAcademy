@@ -6,7 +6,7 @@ async function getAllUsers(req, res){
         var findedUser = await  userController.findAllTheUsers();
         res.status(200).send(findedUser);
     } catch (e) {
-        res.status(500).send(`Han error has ocurred getting all users : ${e}`)
+        res.status(500).send(`Ha ocurrido un error al obtener a todos los usuarios : ${e}`)
     }
 }
 
@@ -19,8 +19,20 @@ async function onPostAddUser(req, res){
     }
 }
 
+async function onDeleteUser(req, res){
+    let id = req.params.userId;
+    try {
+        await userController.deleteUser(id);
+        res.status(201).send(`Usuario con id : ${id} ha sido borrado exitosamente!`);
+    } catch (error) {
+        res.send(error)
+    }
+
+}
+
 
 module.exports = {
     getAllUsers,
-    onPostAddUser
+    onPostAddUser,
+    onDeleteUser
 }

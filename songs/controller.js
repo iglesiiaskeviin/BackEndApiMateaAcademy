@@ -9,9 +9,8 @@ async function addSong(song){
     return await model.addModelSong(song);
 }
 
-async function deleteSong(querySong){
-    console.log("Entrando en deleteSong")
-    return await model.deleteModelSong(querySong);
+async function deleteSong(id){
+    return await model.deleteModelSong(id);
 }
 
 

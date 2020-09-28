@@ -10,8 +10,12 @@ async function addUser(user){
     return await model.addModelUser(user);
 }
 
+async function deleteUser(id){
+    return await model.deleteModelUser(id);
+}
 
 module.exports = {
     findAllTheUsers,
-    addUser
+    addUser,
+    deleteUser
 }

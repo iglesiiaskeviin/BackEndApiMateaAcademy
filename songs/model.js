@@ -31,11 +31,8 @@ async function addModelSong(song){
     await newS.save();
 }
 
-async function deleteModelSong(songQuery){
-    console.log(`Id llegado : ${songQuery}`)
-    console.log("Entrando en deleteModelSong")
-    await db.collection.deleteOne( { "_id" : ObjectId(songQuery) } );
-    console.log("Termina await de deleteModelSong")
+async function deleteModelSong(id){
+    await Song.findByIdAndRemove(id)
 }
 
 module.exports = {

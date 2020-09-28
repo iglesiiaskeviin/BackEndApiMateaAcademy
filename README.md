@@ -30,6 +30,17 @@ http://localhost:4100/users
 
 _Post a new song using post method_
 
+To do this, only use post method and insert into the Body the new params to add on the schema, you can use this :
+
+```
+{
+    "name": "The Song Name",
+    "album": "The Song Album",
+    "duration": "Song Duration",
+    "artist": "Song artist/s"
+}
+```
+
 ```
 http://localhost:4100/songs
 ```

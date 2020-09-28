@@ -21,11 +21,11 @@ async function onPostAddSong(req, res){
 }
 
 async function onDeleteSong(req, res){
-    let query = req.params.songId;
+    let id = req.params.songId;
     console.log("Entrando en onDeleteSong")
     try {
-        await songController.deleteSong(query);
-        res.status(201).send("Se ha eliminado correctamente esta canción!");
+        await songController.deleteSong(id);
+        res.status(201).send(`Canción con id : ${id} ha sido borrado exitosamente!`);
     } catch (error) {
         res.send(error)
     }

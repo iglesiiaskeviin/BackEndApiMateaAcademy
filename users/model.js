@@ -34,7 +34,12 @@ async function addModelUser(user){
 }
 
 
+async function deleteModelUser(id){
+    await User.findByIdAndRemove(id)
+}
+
 module.exports = {
     getAllUsers,
-    addModelUser
+    addModelUser,
+    deleteModelUser
 }
