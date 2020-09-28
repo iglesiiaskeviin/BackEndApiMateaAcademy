@@ -38,3 +38,7 @@ http://localhost:4100/songs
 
 * [NODEJS]
 * [MONGOOSE]
+* [EXPRESS]
+
+## Applications used ⚙️
+* [MongoDB]
