@@ -1,0 +1,38 @@
+[
+    {
+    "name": "Maldición",
+    "album": "Parvadomus",
+    "duration": "3:04",
+    "artist": "Once Tiros"
+    },
+    {
+        "name": "Nos Dijimos Todo",
+        "album": "Imán",
+        "duration": "3:32",
+        "artist": "Once Tiros"
+    },
+    {
+        "name": "Bisturí",
+        "album": "Momento Extraño",
+        "duration": "3:41",
+        "artist": "Once Tiros"
+    },
+    {
+        "name": "La Calle Adicción",
+        "album": "Érase",
+        "duration": "3:13",
+        "artist": "La Vela Puerca"
+    },
+    {
+        "name": "La Hiedra",
+        "album": "Pasaje Salvo",
+        "duration": "2:52",
+        "artist": "La Vela Puerca"
+    },
+    {
+        "name": "Todo el Karma",
+        "album": "Piel y Hueso",
+        "duration": "3:29",
+        "artist": "La Vela Puerca"
+    }
+]

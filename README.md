@@ -19,13 +19,19 @@ _Applications needed_
 _Obtain an array with all the songs that are in the song scheme in the database_
 
 ```
-http://localhost:4100/getSongs
+http://localhost:4100/songs
 ```
 
 _Obtain an array with all the users that are in the user scheme in the database_
 
 ```
-http://localhost:4100/getUsers
+http://localhost:4100/users
+```
+
+_Post a new song using post method_
+
+```
+http://localhost:4100/songs
 ```
 
 ## Development with 🛠️

@@ -6,11 +6,18 @@ async function findAllTheSongs(){
 }
 
 async function addSong(song){
-    console.log("Entrando en addSong")
     return await model.addModelSong(song);
 }
 
+async function deleteSong(querySong){
+    console.log("Entrando en deleteSong")
+    return await model.deleteModelSong(querySong);
+}
+
+
+
 module.exports = {
     findAllTheSongs,
-    addSong
+    addSong,
+    deleteSong
 }

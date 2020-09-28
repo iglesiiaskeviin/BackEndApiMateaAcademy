@@ -15,9 +15,19 @@ console.log(`Server working`);
 
 /* SONGS  */
 
-server.get("/getSongs", songsParam.getAllSongs)
+server.get("/songs", songsParam.getAllSongs)
 
 
 /* USERS */
 
-server.get('/getUsers', usersParam.getAllUsers)
+server.get('/users', usersParam.getAllUsers)
+
+
+/* Adding song by post method */
+
+server.post('/songs', songsParam.onPostSong)
+
+
+/* Deleting song */
+
+server.delete('/:songId', songsParam.onDeleteSong)

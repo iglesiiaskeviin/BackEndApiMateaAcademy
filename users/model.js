@@ -13,10 +13,11 @@ moongose.connect(db,
 const Schema = moongose.Schema;
 
 const usersSchema = new Schema({
-    uuid: Number,
+    name: String,
+    lastname: String,
     email: String,
-    password: String,
-    profilePictureUrl: String,
+    age: Number,
+    artist: String,
 }, {collection: "users"});
 
 const User = moongose.model("users", usersSchema);

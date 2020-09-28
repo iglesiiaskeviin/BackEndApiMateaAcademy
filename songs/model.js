@@ -15,8 +15,8 @@ const Schema = moongose.Schema;
 const songsSchema = new Schema({
     name: {type: String, required: true},
     album: String,
-    duration: Number,
-    artist: Object,
+    duration: String,
+    artist: String, 
 }, {collection: "songs"});
 
 const Song = moongose.model("songs", songsSchema);
@@ -27,13 +27,19 @@ async function getAllSongs(){
 }
 
 async function addModelSong(song){
-    console.log("Entrando en addModelSong")
     var newS = new Song(song);
     await newS.save();
-    console.log("Termina await")
+}
+
+async function deleteModelSong(songQuery){
+    console.log(`Id llegado : ${songQuery}`)
+    console.log("Entrando en deleteModelSong")
+    await db.collection.deleteOne( { "_id" : ObjectId(songQuery) } );
+    console.log("Termina await de deleteModelSong")
 }
 
 module.exports = {
     getAllSongs,
-    addModelSong
+    addModelSong,
+    deleteModelSong
 }
