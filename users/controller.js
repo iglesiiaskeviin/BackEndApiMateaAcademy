@@ -6,6 +6,12 @@ async function findAllTheUsers(){
 }
 
 
+async function addUser(user){
+    return await model.addModelUser(user);
+}
+
+
 module.exports = {
-    findAllTheUsers
+    findAllTheUsers,
+    addUser
 }

@@ -28,7 +28,13 @@ async function getAllUsers(){
     return await User.find({});
 }
 
+async function addModelUser(user){
+    var newU = new User(user);
+    await newU.save();
+}
+
 
 module.exports = {
-    getAllUsers
+    getAllUsers,
+    addModelUser
 }

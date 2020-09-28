@@ -23,9 +23,10 @@ server.get("/songs", songsParam.getAllSongs)
 server.get('/users', usersParam.getAllUsers)
 
 
-/* Adding song by post method */
+/* Adding by post method */
 
-server.post('/songs', songsParam.onPostSong)
+server.post('/songs', songsParam.onPostAddSong)
+server.post('/users', usersParam.onPostAddUser)
 
 
 /* Deleting song */

@@ -10,8 +10,17 @@ async function getAllUsers(req, res){
     }
 }
 
+async function onPostAddUser(req, res){
+    try {
+        await userController.addUser(req.body);
+        res.status(201).send("Se ha añadido con éxito este nuevo usuario!")
+    } catch (error) {
+        res.send(error)
+    }
+}
 
 
 module.exports = {
-    getAllUsers
+    getAllUsers,
+    onPostAddUser
 }

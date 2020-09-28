@@ -11,11 +11,10 @@ async function getAllSongs(req, res){
 }
 
 
-async function onPostSong(req, res){
-    console.log("Entrando en onPostSong")
+async function onPostAddSong(req, res){
     try {
         await songController.addSong(req.body);
-        res.status(201).send("Se ha posteado con éxito la canción!")
+        res.status(201).send("Se ha añadido con éxito esta nueva canción!")
     } catch (error) {
         res.send(error)
     }
@@ -35,6 +34,6 @@ async function onDeleteSong(req, res){
 
 module.exports = {
     getAllSongs,
-    onPostSong,
+    onPostAddSong,
     onDeleteSong
 }
