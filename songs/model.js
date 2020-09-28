@@ -57,6 +57,7 @@ async function updateModelSong(id, bod){
                     foundedObj.duration = bod.duration;
                 }
 
+                /* no terminado aun */
                 if (bod.artist) {
                     foundedObj.artist = bod.artist;
                 }
