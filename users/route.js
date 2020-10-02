@@ -41,11 +41,35 @@ async function onUpdateUser(req, res){
     }
 }
 
+async function onModifyUserFavSongs(req, res){
+    try {
+        await userController.modifyUserFavSongs(id, bod);
+        res.status(201).send("Se ha modificado la canción favorita de este usuario");
+    } catch (error) {
+        res.status(500).send("Un error ha ocurrido")
+    }
+}
+
+
+async function onAddFavoriteSongToUser(req, res){
+    console.log("Entro en onAddFavoriteSongToUser")
+    const id = req.params.userId;
+    const song = req.params.songName;
+    try {
+        await userController.addFavoriteSong(id, song)
+        res.status(201).send("Se le ha agregado correctamente esa canción a este usuario");
+    } catch (error) {
+        res.status(500).send(`No se ha podido agregar esa canción a este usuario ${error}`);
+    }
+}
+
 
 
 module.exports = {
     getAllUsers,
     onPostAddUser,
     onDeleteUser,
-    onUpdateUser
+    onUpdateUser,
+    onModifyUserFavSongs,
+    onAddFavoriteSongToUser
 }

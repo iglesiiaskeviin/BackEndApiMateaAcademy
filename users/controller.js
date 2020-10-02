@@ -18,9 +18,16 @@ async function updateUser(id, bod){
     return await model.updateModelUser(id, bod);
 }
 
+
+async function addFavoriteSong(user, song){
+    console.log("Entro en addFavoriteSongs")
+    return await model.updateModelUserFavoriteSongs(user, song)
+}
+
 module.exports = {
     findAllTheUsers,
     addUser,
     deleteUser,
-    updateUser
+    updateUser,
+    addFavoriteSong
 }

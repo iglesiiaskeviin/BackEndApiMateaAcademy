@@ -19,6 +19,8 @@
   "homepage": "https://github.com/iglesiiaskeviin/modulo-proyecto3-matea#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "mongoose": "^5.10.6"
+    "mongodb": "^3.6.2",
+    "mongoose": "^5.10.6",
+    "nodemon": "^2.0.4"
   }
 }

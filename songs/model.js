@@ -5,7 +5,8 @@ moongose.connect(db,
 { 
     useNewUrlParser: true,
     useCreateIndex: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useFindAndModify: false
 })
 .then(() => console.log('MongoDB connected...'))
 .catch(err => console.log("An error has ocurred:" + err));
@@ -74,5 +75,6 @@ module.exports = {
     getAllSongs,
     addModelSong,
     deleteModelSong,
-    updateModelSong
+    updateModelSong,
+    Song
 }

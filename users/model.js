@@ -1,23 +1,27 @@
+const songsSchema = require('../songs/model.js'); 
+
 const moongose = require("mongoose");
+const { ObjectID } = require('bson');
 
 const db = 'mongodb+srv://kevin:123asd@cluster0.vahxu.azure.mongodb.net/proyectoModulo3?retryWrites=true&w=majority'
 moongose.connect(db,
 { 
     useNewUrlParser: true,
     useCreateIndex: true,
-    useUnifiedTopology: true
+    useUnifiedTopology: true,
+    useFindAndModify: false
 })
 .then(() => console.log('MongoDB connected...'))
 .catch(err => console.log("An error has ocurred:" + err));
 
 const Schema = moongose.Schema;
-
+/*  */
 const usersSchema = new Schema({
-    name: String,
-    lastname: String,
-    email: String,
-    age: Number,
-    artist: String,
+    "name": String,
+    "lastname": String,
+    "email": String,
+    "age": String,
+    "favoriteSongs": [{type: Object}],
 }, {collection: "users"});
 
 const User = moongose.model("users", usersSchema);
@@ -40,14 +44,13 @@ async function deleteModelUser(id){
 
 async function updateModelUser(id, bod){
     var myId = id;
-    console.log(myId);
     return await User.findOne({_id: myId}, function(error, foundedObj){
         if (error) {
             console.log(`Ha ocurrido un error ${error}`);
         }else{
             if (!foundedObj) {
                 console.log("Este objeto no existe");
-            } else{
+            } else {
                 if (bod.name) {
                     foundedObj.name = bod.name;
                 }
@@ -60,20 +63,36 @@ async function updateModelUser(id, bod){
                     foundedObj.email = bod.email;
                 }
 
-                if (bod.artist) {
-                    foundedObj.artist = bod.artist;
+                if (bod.age) {
+                    foundedObj.age = bod.age;
                 }
 
                 foundedObj.save();
             }
         }
     })
+}
 
+const updateModelUserFavoriteSongs = async(userId, songName) => {
+    console.log("Entro en updateModelUserFavoriteSongs")
+    console.log(userId)
+    console.log(songName)
+    const query = {name: songName};
+    const finded = await songsSchema.Song.findOne(query)
+    console.log(finded)
+    return await User.findOneAndUpdate({_id: userId},{$addToSet: {favoriteSongs: finded._id}}, function(error, success){
+        if (error) {
+            console.log(error)
+        }else{
+            console.log(success)
+        }
+    })
 }
 
 module.exports = {
     getAllUsers,
     addModelUser,
     deleteModelUser,
-    updateModelUser
+    updateModelUser,
+    updateModelUserFavoriteSongs
 }

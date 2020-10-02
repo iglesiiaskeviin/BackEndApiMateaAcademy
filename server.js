@@ -38,3 +38,7 @@ server.delete('/users/:userId', usersParam.onDeleteUser)
 
 server.put('/songs/:id', songsParam.onUpdateSong)
 server.put('/users/:id', usersParam.onUpdateUser)
+
+/* Adding fav song to user */
+
+server.put('/songs/adduserfavsong/:userId/:songName', usersParam.onAddFavoriteSongToUser)

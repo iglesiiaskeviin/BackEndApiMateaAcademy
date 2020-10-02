@@ -3,36 +3,78 @@
     "name": "Kevin",
     "lastname": "Iglesias",
     "email": "koko65@gmail.com",
-    "artist": "Once Tiros"
+    "age": "18 años",
+    "favoriteSongs": 
+    {
+        "name": "Maldición",
+        "album": "Parvadomus",
+        "duration": "3:04",
+        "artist":"Once Tiros"
+    }
     },
     {
         "name": "Kevin",
         "lastname": "Iglesias",
         "email": "koko65@gmail.com",
-        "artist": "Once Tiros"
+        "age": "18 años",
+        "favoriteSongs": 
+        {
+            "name": "Maldición",
+            "album": "Parvadomus",
+            "duration": "3:04",
+            "artist":"Once Tiros"
+        }
     },
     {
         "name": "Kevin",
         "lastname": "Iglesias",
         "email": "koko65@gmail.com",
-        "artist": "Once Tiros"
+        "age": "18 años",
+        "favoriteSongs": 
+        {
+            "name": "Maldición",
+            "album": "Parvadomus",
+            "duration": "3:04",
+            "artist":"Once Tiros"
+        }
     },
     {
         "name": "Kevin",
         "lastname": "Iglesias",
         "email": "koko65@gmail.com",
-        "artist": "Once Tiros"
+        "age": "18 años",
+        "favoriteSongs": 
+        {
+            "name": "Maldición",
+            "album": "Parvadomus",
+            "duration": "3:04",
+            "artist":"Once Tiros"
+        }
     },
     {
         "name": "Kevin",
         "lastname": "Iglesias",
         "email": "koko65@gmail.com",
-        "artist": "Once Tiros"
+        "age": "18 años",
+        "favoriteSongs": 
+        {
+            "name": "Maldición",
+            "album": "Parvadomus",
+            "duration": "3:04",
+            "artist":"Once Tiros"
+        }
     },
     {
         "name": "Kevin",
         "lastname": "Iglesias",
         "email": "koko65@gmail.com",
-        "artist": "Once Tiros"
+        "age": "18 años",
+        "favoriteSongs": 
+        {
+            "name": "Maldición",
+            "album": "Parvadomus",
+            "duration": "3:04",
+            "artist":"Once Tiros"
+        }
     }
 ]

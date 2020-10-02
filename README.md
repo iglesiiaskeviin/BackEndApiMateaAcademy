@@ -41,6 +41,19 @@ To do this, only use post method and insert into the Body the new params to add 
 }
 ```
 
+_Post a new user using post method_
+
+```
+{
+    "name": "The user name",
+    "lastname": "The user lastname",
+    "email": "User email",
+    "age": "User age",
+    "artist": "The user favorites artist"
+    "favoriteSongs": "The user favorite songs"
+}
+```
+
 ```
 http://localhost:4100/songs
 ```
