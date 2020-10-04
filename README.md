@@ -72,5 +72,5 @@ This will be add `Karma` ID song on the favoriteSongs object of the user.
 
 ## Applications used ⚙️
 * [MongoDB]
-* [MongoDBAtlCompass]
+* [MongoDBCompass]
 * [PostMan]
