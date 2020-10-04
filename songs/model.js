@@ -41,10 +41,10 @@ async function updateModelSong(id, bod){
     console.log(myId);
     return await Song.findOne({_id: myId}, function(error, foundedObj){
         if (error) {
-            console.log(`Ha ocurrido un error ${error}`);
+            console.log(`Han error has occurred ${error}`);
         }else{
             if (!foundedObj) {
-                console.log("Este objeto no existe");
+                console.log("This object dont't exist");
             } else{
                 if (bod.name) {
                     foundedObj.name = bod.name;

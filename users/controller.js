@@ -20,7 +20,6 @@ async function updateUser(id, bod){
 
 
 async function addFavoriteSong(user, song){
-    console.log("Entro en addFavoriteSongs")
     return await model.updateModelUserFavoriteSongs(user, song)
 }
 

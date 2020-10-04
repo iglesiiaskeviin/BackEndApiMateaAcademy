@@ -23,7 +23,7 @@ async function onDeleteUser(req, res){
     let id = req.params.userId;
     try {
         await userController.deleteUser(id);
-        res.status(201).send(`Usuario con id : ${id} ha sido borrado exitosamente!`);
+        res.status(201).send(`The user with id : ${id} has been deleted!`);
     } catch (error) {
         res.send(error)
     }
@@ -35,24 +35,23 @@ async function onUpdateUser(req, res){
     var bod = req.body;
     try {
         await userController.updateUser(id, bod);
-        res.status(201).send("Se ha modificado con éxito este usuario")
+        res.status(201).send("This user will be modify correectly")
     } catch (error) {
-        res.status(500).send("Un error ha ocurrido");
+        res.status(500).send("Han error has ocurred server error (500)");
     }
 }
 
 async function onModifyUserFavSongs(req, res){
     try {
         await userController.modifyUserFavSongs(id, bod);
-        res.status(201).send("Se ha modificado la canción favorita de este usuario");
+        res.status(201).send("The favorite song of this user will be modify correectly");
     } catch (error) {
-        res.status(500).send("Un error ha ocurrido")
+        res.status(500).send("Han error has ocurred server error (500)")
     }
 }
 
 
 async function onAddFavoriteSongToUser(req, res){
-    console.log("Entro en onAddFavoriteSongToUser")
     const id = req.params.userId;
     const song = req.params.songName;
     try {

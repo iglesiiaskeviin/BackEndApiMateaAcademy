@@ -55,10 +55,10 @@ async function updateModelUser(id, bod){
     var myId = id;
     return await User.findOne({_id: myId}, function(error, foundedObj){
         if (error) {
-            console.log(`Ha ocurrido un error ${error}`);
+            console.log(`Han error has ocurred ${error}`);
         }else{
             if (!foundedObj) {
-                console.log("Este objeto no existe");
+                console.log("This element don't exist");
             } else {
                 if (bod.name) {
                     foundedObj.name = bod.name;
