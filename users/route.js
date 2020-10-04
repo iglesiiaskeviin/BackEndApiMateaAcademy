@@ -13,7 +13,7 @@ async function getAllUsers(req, res){
 async function onPostAddUser(req, res){
     try {
         await userController.addUser(req.body);
-        res.status(201).send("Se ha añadido con éxito este nuevo usuario!")
+        res.status(201).send("User added correcly!")
     } catch (error) {
         res.send(error)
     }
@@ -56,9 +56,9 @@ async function onAddFavoriteSongToUser(req, res){
     const song = req.params.songName;
     try {
         await userController.addFavoriteSong(id, song)
-        res.status(201).send("Se le ha agregado correctamente esa canción a este usuario");
+        res.status(201).send('Song added correcly to user');
     } catch (error) {
-        res.status(500).send(`No se ha podido agregar esa canción a este usuario ${error}`);
+        res.status(500).send(`This song can't be added to user ${error}`);
     }
 }
 

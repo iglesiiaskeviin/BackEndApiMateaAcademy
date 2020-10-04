@@ -53,7 +53,7 @@ Type: post param -> http://localhost:4100/users
     "email": "User email",
     "age": "User age",
     "artist": "The user favorites artist"
-    "favoriteSongs": "The user favorite songs"
+    "favoriteSongs": []
 }
 ```
 
