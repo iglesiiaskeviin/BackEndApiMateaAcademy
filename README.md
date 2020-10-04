@@ -61,7 +61,7 @@ _Add a new song for some user_
 http://localhost:4100/songs/adduserfavsong/:TheUserName/:TheSongName
 Example: 
 http://localhost:4100/songs/adduserfavsong/:Kevin/:Karma
-This will be add `Karma` ID on the favoriteSongs object of the user.
+This will be add `Karma` ID song on the favoriteSongs object of the user.
 ```
 
 ## Development with 🛠️
@@ -72,3 +72,5 @@ This will be add `Karma` ID on the favoriteSongs object of the user.
 
 ## Applications used ⚙️
 * [MongoDB]
+* [MongoDBAtlCompass]
+* [PostMan]
