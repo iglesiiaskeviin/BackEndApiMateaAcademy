@@ -76,5 +76,5 @@ module.exports = {
     addModelSong,
     deleteModelSong,
     updateModelSong,
-    Song
+    Songs: Song
 }

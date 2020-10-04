@@ -1,8 +1,7 @@
-const songsSchema = require('../songs/model.js'); 
+const Song = require('../songs/model.js'); 
 
 const moongose = require("mongoose");
 const { ObjectID } = require('bson');
-
 const db = 'mongodb+srv://kevin:123asd@cluster0.vahxu.azure.mongodb.net/proyectoModulo3?retryWrites=true&w=majority'
 moongose.connect(db,
 { 
@@ -17,11 +16,11 @@ moongose.connect(db,
 const Schema = moongose.Schema;
 /*  */
 const usersSchema = new Schema({
-    "name": String,
-    "lastname": String,
-    "email": String,
-    "age": String,
-    "favoriteSongs": [{type: Object}],
+    name: String,
+    lastname: String,
+    email: String,
+    age: String,
+    favoriteSongs: [{type: Schema.Types.ObjectID, ref:'songs'}],
 }, {collection: "users"});
 
 const User = moongose.model("users", usersSchema);
@@ -41,6 +40,16 @@ async function addModelUser(user){
 async function deleteModelUser(id){
     await User.findByIdAndRemove(id)
 }
+
+const findUser = async(nameUser) => {
+    const result = await User.findOne({ name: nameUser});
+    return result;
+};
+
+const findeSong = async(nameSong) => {
+    const result = await Song.Songs.findOne({ name: nameSong });
+    return result;
+};
 
 async function updateModelUser(id, bod){
     var myId = id;
@@ -74,19 +83,9 @@ async function updateModelUser(id, bod){
 }
 
 const updateModelUserFavoriteSongs = async(userId, songName) => {
-    console.log("Entro en updateModelUserFavoriteSongs")
-    console.log(userId)
-    console.log(songName)
-    const query = {name: songName};
-    const finded = await songsSchema.Song.findOne(query)
-    console.log("Llegada: "+finded)
-    return await User.findOneAndUpdate({_id: userId},{$addToSet: {favoriteSongs: finded._id}}, function(error, success){
-        if (error) {
-            console.log(error)
-        }else{
-            console.log(success)
-        }
-    })
+    const succesUser = await findUser(userId);
+    const succesSong = await findeSong(songName);
+    await User.findByIdAndUpdate({ _id: succesUser._id }, { $set: { favoriteSongs: succesSong._id }});
 }
 
 module.exports = {
@@ -94,5 +93,7 @@ module.exports = {
     addModelUser,
     deleteModelUser,
     updateModelUser,
-    updateModelUserFavoriteSongs
+    updateModelUserFavoriteSongs,
+    findUser,
+    findeSong
 }

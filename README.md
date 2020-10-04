@@ -39,6 +39,8 @@ To do this, only use post method and insert into the Body the new params to add 
     "duration": "Song Duration",
     "artist": "Song artist/s"
 }
+
+_REMEMBER USE JSON IN RAW MODE ON THE BODY_
 ```
 
 _Post a new user using post method_
@@ -52,10 +54,16 @@ _Post a new user using post method_
     "artist": "The user favorites artist"
     "favoriteSongs": "The user favorite songs"
 }
-```
+_REMEMBER USE JSON IN RAW MODE ON THE BODY_
+```}
+
+_Add a new song for some user_
 
 ```
-http://localhost:4100/songs
+http://localhost:4100/songs/adduserfavsong/:TheUserName/:TheSongName
+Example: 
+http://localhost:4100/songs/adduserfavsong/:Kevin/:Karma
+This will be add `Karma` ID on the favoriteSongs object of the user.
 ```
 
 ## Development with 🛠️
