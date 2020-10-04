@@ -79,7 +79,7 @@ const updateModelUserFavoriteSongs = async(userId, songName) => {
     console.log(songName)
     const query = {name: songName};
     const finded = await songsSchema.Song.findOne(query)
-    console.log(finded)
+    console.log("Llegada: "+finded)
     return await User.findOneAndUpdate({_id: userId},{$addToSet: {favoriteSongs: finded._id}}, function(error, success){
         if (error) {
             console.log(error)

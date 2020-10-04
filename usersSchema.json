@@ -4,77 +4,53 @@
     "lastname": "Iglesias",
     "email": "koko65@gmail.com",
     "age": "18 años",
-    "favoriteSongs": 
-    {
-        "name": "Maldición",
-        "album": "Parvadomus",
-        "duration": "3:04",
-        "artist":"Once Tiros"
-    }
+    "favoriteSongs": [{
+
+    }]
     },
     {
         "name": "Kevin",
         "lastname": "Iglesias",
         "email": "koko65@gmail.com",
         "age": "18 años",
-        "favoriteSongs": 
-        {
-            "name": "Maldición",
-            "album": "Parvadomus",
-            "duration": "3:04",
-            "artist":"Once Tiros"
-        }
+        "favoriteSongs": [{
+
+            }]
     },
     {
         "name": "Kevin",
         "lastname": "Iglesias",
         "email": "koko65@gmail.com",
         "age": "18 años",
-        "favoriteSongs": 
-        {
-            "name": "Maldición",
-            "album": "Parvadomus",
-            "duration": "3:04",
-            "artist":"Once Tiros"
-        }
+        "favoriteSongs": [{
+
+            }]
     },
     {
         "name": "Kevin",
         "lastname": "Iglesias",
         "email": "koko65@gmail.com",
         "age": "18 años",
-        "favoriteSongs": 
-        {
-            "name": "Maldición",
-            "album": "Parvadomus",
-            "duration": "3:04",
-            "artist":"Once Tiros"
-        }
+        "favoriteSongs": [{
+
+            }]
     },
     {
         "name": "Kevin",
         "lastname": "Iglesias",
         "email": "koko65@gmail.com",
         "age": "18 años",
-        "favoriteSongs": 
-        {
-            "name": "Maldición",
-            "album": "Parvadomus",
-            "duration": "3:04",
-            "artist":"Once Tiros"
-        }
+        "favoriteSongs": [{
+
+            }]
     },
     {
         "name": "Kevin",
         "lastname": "Iglesias",
         "email": "koko65@gmail.com",
         "age": "18 años",
-        "favoriteSongs": 
-        {
-            "name": "Maldición",
-            "album": "Parvadomus",
-            "duration": "3:04",
-            "artist":"Once Tiros"
-        }
+        "favoriteSongs": [{
+
+            }]
     }
 ]
