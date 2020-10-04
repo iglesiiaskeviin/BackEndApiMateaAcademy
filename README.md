@@ -19,13 +19,13 @@ _Applications needed_
 _Obtain an array with all the songs that are in the song scheme in the database_ 🎵🎵🎵🎵🎵🎵
 
 ```
-http://localhost:4100/songs
+Type: get param -> http://localhost:4100/songs
 ```
 
 _Obtain an array with all the users that are in the user scheme in the database_ 🧒🏼 👦🏼 👧🏼 🧑🏼 👨🏼 👩🏼
 
 ```
-http://localhost:4100/users
+Type: get param -> http://localhost:4100/users
 ```
 
 _Post a new song using post method_ 🎵
@@ -33,6 +33,7 @@ _Post a new song using post method_ 🎵
 To do this, only use post method and insert into the Body the new params to add on the schema, you can use this :
 
 ```
+Type: post param -> http://localhost:4100/songs
 {
     "name": "The Song Name",
     "album": "The Song Album",
@@ -45,6 +46,7 @@ To do this, only use post method and insert into the Body the new params to add 
 _Post a new user using post method_ 👨🏼 👩🏼
 
 ```
+Type: post param -> http://localhost:4100/users
 {
     "name": "The user name",
     "lastname": "The user lastname",
@@ -54,13 +56,25 @@ _Post a new user using post method_ 👨🏼 👩🏼
     "favoriteSongs": "The user favorite songs"
 }
 ```
+
+_Delete a song_ ✂️
+
+```
+Type: delete param -> http://localhost:4100/songs/:songId
+```
+
+_Delete a user_ ✂️
+
+```
+Type: delete param -> http://localhost:4100/songs/:userId
+```
+
 ⚠️ _REMEMBER USE JSON IN RAW MODE ON THE BODY_ ⚠️
 
 _Add a new song for some user_ 👨🏼 👩🏼🎵
 ```
-http://localhost:4100/songs/adduserfavsong/:TheUserName/:TheSongName
-Example: 
-http://localhost:4100/songs/adduserfavsong/:Kevin/:Karma
+Type: put param -> http://localhost:4100/songs/adduserfavsong/:TheUserName/:TheSongName
+Example: http://localhost:4100/songs/adduserfavsong/:Kevin/:Karma
 This will be add `Karma` ID song on the favoriteSongs object of the user.
 ```
 
