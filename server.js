@@ -1,4 +1,5 @@
 const moongose = require("mongoose");
+const cors = require("cors");
 const db = 'mongodb+srv://kevin:123asd@cluster0.vahxu.azure.mongodb.net/proyectoModulo3?retryWrites=true&w=majority'
 moongose.connect(db,
 { 
@@ -18,6 +19,7 @@ const usersParam = require('./users/route.js')
 
 /* SERVER INIT */
 var server = express();
+server.use(cors());
 server.use(express.json());
 server.listen(4100);
 
